@@ -54,5 +54,10 @@ public class PersonajeServiceImpl implements IPersonajeService{
     public boolean existsById(Long id) {
         return personajeDao.existsById(id);
     }
+
+    @Override
+    public Long getTotal() {
+         return personajeDao.count();
+    }
     
 }

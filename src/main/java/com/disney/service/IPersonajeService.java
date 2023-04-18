@@ -17,4 +17,5 @@ public interface IPersonajeService {
     Personaje findById(Long id);
     void deleteById(Long id);
     boolean existsById(Long id);
+    public Long getTotal();
 }

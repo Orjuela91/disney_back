@@ -44,9 +44,13 @@ public class PersonajeController {
         List<Personaje> listaPersonajes = new ArrayList<>();
         Map<String, Object> response = new HashMap<>();
 
+        int totalPages = 0;
+        
         try {
             
             listaPersonajes = personajeService.findPaginated(pageNo, pageSize);
+            
+            totalPages = (int) Math.ceil(personajeService.getTotal().doubleValue() / pageSize);
             
         } catch (Exception e) {
             
@@ -59,6 +63,7 @@ public class PersonajeController {
         response.put("pageNo", pageNo);
         response.put("pageSize", pageSize);
         response.put("data", listaPersonajes);
+        response.put("totalPages", totalPages);
 
         return new ResponseEntity<>(response, HttpStatus.OK);
     }

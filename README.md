@@ -8,4 +8,4 @@
 ruta: Other Sources src/main/resources/application.properties
 ![image](https://user-images.githubusercontent.com/57199804/232682156-720e572d-3e25-4688-86d3-974feb069ded.png)
 6) abrir el proyecto con un IDE (yo use netbeans)
-7) una vez abierto el proyecto en el IDE, nos ubicamos sobre la raiz del proyecto, damo click derecho y seleccionamos la opcion run o ejecutar
+7) una vez abierto el proyecto en el IDE, nos ubicamos sobre la raiz del proyecto, damos click derecho y seleccionamos la opcion run o ejecutar

@@ -38,5 +38,21 @@ public class PersonajeServiceImpl implements IPersonajeService{
     public Personaje save(Personaje personaje) {
         return personajeDao.save(personaje);
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public Personaje findById(Long id) {
+        return personajeDao.findById(id).orElse(null);
+    }
+
+    @Override
+    public void deleteById(Long id) {
+        personajeDao.deleteById(id);
+    }
+
+    @Override
+    public boolean existsById(Long id) {
+        return personajeDao.existsById(id);
+    }
     
 }

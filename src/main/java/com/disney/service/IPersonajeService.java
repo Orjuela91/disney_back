@@ -14,4 +14,7 @@ import java.util.List;
 public interface IPersonajeService {
     List<Personaje> findPaginated(int pageNo, int pageSize);
     Personaje save(Personaje personaje);
+    Personaje findById(Long id);
+    void deleteById(Long id);
+    boolean existsById(Long id);
 }

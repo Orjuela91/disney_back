@@ -33,7 +33,6 @@ public class Personaje implements Serializable{
     private String nombre;
     
     @NotNull(message = "tv_show_null")// agrega el constraint not null en la tabla SQL, ademas valida que la propiedad no este nula en el Objeto cuando se va guardar en la bd
-    @NotBlank(message = "tv_show_blank")// valida que la propiedad no sea "" en el Objeto cuando se va guardar en la bd
     @Column(name = "tv_show")
     private String tvShow;
     
@@ -42,7 +41,6 @@ public class Personaje implements Serializable{
     private Long apiId;
     
     @NotNull(message = "foto_null")// agrega el constraint not null en la tabla SQL, ademas valida que la propiedad no este nula en el Objeto cuando se va guardar en la bd
-    @NotBlank(message = "foto_blank")// valida que la propiedad no sea "" en el Objeto cuando se va guardar en la bd
     private String foto;
 
     public Long getId() {
